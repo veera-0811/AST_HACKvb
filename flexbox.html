@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox Layout</title>
+    <style>
+        .flex-container {
+            display: flex;
+            padding: 20px;
+            background-color: #d39c9c;
+        }
+
+        /* Flexbox Items */
+        .flex-item {
+            background-color: #4CAF50;
+            padding: 20px;
+            margin: 10px;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            flex: 1; /* Grow to fill the container space */
+            min-width: 300px; /* Minimum width for each item */
+        }
+
+        /* Responsive Layout: Stack items on smaller screens */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column; /* Stack items vertically */
+                align-items: stretch; /* Stretch items to fill the width */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Flexbox Container -->
+    <div class="flex-container">
+        <div class="flex-item">Home</div>
+        <div class="flex-item">About</div>
+        <div class="flex-item">Contact</div>
+    </div>
+
+</body>
+</html>
