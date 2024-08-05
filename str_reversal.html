@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string reversal</title>
+    <style>
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+        <h1>Number of vowels in string </h1>
+        <input type="text" id="textinp" placeholder="Enter a string">
+        <button onclick="strrev()">Reverse</button>
+        <p id="result"></p>
+    <script>
+    function strrev() {
+    let string = document.getElementById('textinp').value;
+    document.getElementById('result').innerText = "The number of vowels in string " + string + " is "+  nv;
+}
+
+    </script>
+</body>
+</html>
