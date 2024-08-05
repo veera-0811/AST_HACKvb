@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number of vowels</title>
+    <style>
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+        <h1>Number of vowels in string </h1>
+        <input type="text" id="textinp" placeholder="Enter a string">
+        <button onclick="vcount()">Calculate</button>
+        <p id="result"></p>
+    <script>
+    function vcount() {
+    let string = document.getElementById('textinp').value;
+    string = string.toLowerCase();
+    let nv  = 0;
+    for (let i=0; i<string.length ; i++){
+        if (string[i] ==='a' || string[i] === 'e' || string[i] === 'i'  || string[i] === 'o'  || string[i] === 'u'  ){
+            nv = nv+1;
+        }
+    }
+
+
+    document.getElementById('result').innerText = "The number of vowels in string " + string + " is "+  nv;
+}
+
+    </script>
+</body>
+</html>

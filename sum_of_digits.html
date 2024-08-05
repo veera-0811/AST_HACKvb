@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of digits</title>
+    <style>
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+        <h1>Sum of digits</h1>
+        <input type="number" id="numinp" placeholder="Enter a number">
+        <button onclick="sumofdig()">Calculate</button>
+        <p id="result"></p>
+    <script>
+    function sumofdig() {
+    let number = document.getElementById('numinp').value;
+    let num2 = number;
+    let rem;
+    let sum = 0;
+    while (number>0){
+        rem = number % 10;
+        sum = sum + rem;
+        number =Math.floor(number/10);
+
+    }
+
+
+    document.getElementById('result').innerText = "The sum of digits of number " + num2 + " is "+  sum;
+}
+
+    </script>
+</body>
+</html>
