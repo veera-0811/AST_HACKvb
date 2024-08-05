@@ -25,7 +25,8 @@
     <script>
     function strrev() {
     let string = document.getElementById('textinp').value;
-    document.getElementById('result').innerText = "The number of vowels in string " + string + " is "+  nv;
+    const strRev =  string.split('').reverse().join('');
+    document.getElementById('result').innerText = "The reverse of string " + string + " is "+  strRev;
 }
 
     </script>
